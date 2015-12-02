@@ -1,0 +1,19 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="mtn.lgdx.tymap.MainActivity" >
+    
+    <item
+        android:id="@+id/action_search"
+        android:showAsAction="ifRoom|collapseActionView"
+        android:actionViewClass="android.widget.SearchView"
+        android:voiceSearchMode="showVoiceSearchButton|launchRecognizer"
+        android:icon="@drawable/actionbar_search_icon"
+        android:title="@string/action_search"/>
+    
+     <item
+        android:id="@+id/action_track"
+        android:showAsAction="ifRoom"
+        android:icon="@drawable/ic_menu_track"
+        android:title="@string/action_track"/>
+
+</menu>
