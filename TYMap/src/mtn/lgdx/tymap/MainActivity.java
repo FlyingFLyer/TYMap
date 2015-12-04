@@ -138,13 +138,13 @@ public class MainActivity extends Activity implements LocationSource, AMapLocati
 	private void setUpMap(){
 		aMap.setLocationSource(this);
 		//aMap.getUiSettings().setMyLocationButtonEnabled(true);
-		uiSettings.setMyLocationButtonEnabled(true);	//显示定位按钮
-		uiSettings.setCompassEnabled(true);				//显示指南针
-		uiSettings.setScaleControlsEnabled(true);		//显示比例尺
-		uiSettings.setZoomPosition(AMapOptions.ZOOM_POSITION_RIGHT_BUTTOM);	//设置缩放按钮的位置为右边界中部
+		uiSettings.setMyLocationButtonEnabled(true);	//display location button
+		uiSettings.setCompassEnabled(true);				//display compass
+		uiSettings.setScaleControlsEnabled(true);		//display scale control 
+		uiSettings.setZoomPosition(AMapOptions.ZOOM_POSITION_RIGHT_BUTTOM);	//
 		aMap.setMyLocationEnabled(true);
 		aMap.setMyLocationType(AMap.LOCATION_TYPE_MAP_FOLLOW);
-		aMap.setOnMarkerClickListener(this);		//设置Marker点击事件监听器
+		aMap.setOnMarkerClickListener(this);		//set Marker click listener
 	}
 
 	public void activate(OnLocationChangedListener listener) {
@@ -192,13 +192,13 @@ public class MainActivity extends Activity implements LocationSource, AMapLocati
 		if (mListener != null && amapLocation != null) {
 			if (amapLocation != null
 					&& amapLocation.getAMapException().getErrorCode() == 0) {
-				mListener.onLocationChanged(amapLocation);// 显示系统小蓝点
+				mListener.onLocationChanged(amapLocation);		// 
 				current_latLng = new LatLng(amapLocation.getLatitude(), amapLocation.getLongitude());
 				markerOptions = new MarkerOptions();
 				markerOptions.visible(true)
 							.position(current_latLng)
-							.title("地址:"+amapLocation.getAddress())
-							.snippet("经度："+current_latLng.longitude+"  纬度："+current_latLng.latitude)
+							.title("鍦板潃"+amapLocation.getAddress())
+							.snippet("缁忓害"+current_latLng.longitude+"  绾害"+current_latLng.latitude)
 							.draggable(false)
 							.setFlat(true);
 				aMap.addMarker(markerOptions);
